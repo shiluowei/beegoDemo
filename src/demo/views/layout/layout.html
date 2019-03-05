@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- ionicons -->
+    <!-- Simplify -->
+    <link href="/static/css/simplify.min.css" rel="stylesheet">
+    {{.HtmlHead}}
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <div class="nav-header">
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="brand">
+                    <i class="fa fa-database"></i><span class="brand-name">必由科技</span>
+                </a>
+            </div>
+            <div class="nav-container">
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav-notification">
+                    <li class="search-list">
+                        <div class="search-input-wrapper">
+                            <div class="search-input">
+                                <input type="text" class="form-control input-sm inline-block">
+                                <a href="#" class="input-icon text-normal"><i class="ion-ios7-search-strong"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pull-right m-right-sm">
+                    <div class="user-block hidden-xs">
+                        <a href="#" id="userToggle" data-toggle="dropdown">
+                            <img src="/static/images/runner.png" alt="" class="img-circle inline-block user-profile-pic">
+                            <div class="user-detail inline-block">
+                                {{  .username }}
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="panel border dropdown-menu user-panel">
+                            <div class="panel-body paddingTB-sm">
+                                <ul>
+                                    <li>
+                                        <a href="/auth/logout">
+                                            <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">Sign out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav-notification">
+                        <li>
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i></a>
+                            <span class="badge badge-info bounceIn animation-delay6 active">1</span>
+                            <ul class="dropdown-menu notification dropdown-3 pull-right">
+                                <li><a href="#">有一条消息需要处理</a></li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-warning">
+													<i class="fa fa-warning"></i>
+												</span>
+                                        <span class="m-left-xs">Server #2 not responding.</span>
+                                        <span class="time text-muted">Just now</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">View all notifications</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- ./top-nav-inner -->
+    </header>
+    {{ template  "layout/aside.html" }}
+
+    <div class="main-container">
+        <div class="padding-md">
+        {{.LayoutContent}}
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+</div><!-- /wrapper -->
+
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Jquery -->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<!-- Bootstrap -->
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<!-- Slimscroll -->
+<script src='/static/js/jquery.slimscroll.min.js'></script>
+<!-- Popup Overlay -->
+<script src='/static/js/jquery.popupoverlay.min.js'></script>
+<!-- Modernizr -->
+<script src='/static/js/modernizr.min.js'></script>
+<!-- Simplify -->
+<script src="/static/js/simplify/simplify.js"></script>
+{{.Scripts}}
+</body>
+</html>

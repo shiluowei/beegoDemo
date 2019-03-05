@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> 必由科技 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- ionicons -->
+    <!-- Simplify -->
+    <link href="/static/css/simplify.min.css" rel="stylesheet">
+</head>
+<body class="overflow-hidden light-background">
+<div class="wrapper no-navigation preload">
+    <div class="sign-in-wrapper">
+        <div class="sign-in-inner">
+            <div class="login-brand text-center">
+                <i class="fa fa-database m-right-xs"></i> 必由科技 <strong class="text-skin">管理平台</strong>
+            </div>
+            <form action="/auth/login" method="post" name="login">
+                <div class="form-group m-bottom-md">
+                    <input type="text" class="form-control" placeholder="登录账号" name="username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="登录密码" name="password" required>
+                </div>
+                <div class="m-top-md p-top-sm">
+                    <input type="submit" value="登陆" class="btn btn-success block form-control ">
+                </div>
+                {{ .Err }}
+            </form>
+        </div><!-- ./sign-in-inner -->
+    </div><!-- ./sign-in-wrapper -->
+</div><!-- /wrapper -->
+
+<a href="" id="scroll-to-top" class="hidden-print"><i class="icon-chevron-up"></i></a>
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<!-- Jquery -->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<!-- Bootstrap -->
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<!-- Slimscroll -->
+<link href="/static/js/jquery.slimscroll.min.js" >
+<!-- Popup Overlay -->
+<link href="/static/js/jquery.popupoverlay.min.js" >
+<!-- Modernizr -->
+<link href="/static/js/modernizr.min.js" >
+<!-- Simplify -->
+<link href="/static/js/simplify/simplify.js" >
